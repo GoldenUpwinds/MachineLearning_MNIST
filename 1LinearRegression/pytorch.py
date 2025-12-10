@@ -26,16 +26,16 @@ test_loader = DataLoader(test_datset, batch_size=batch_size, shuffle=False)
 
 
 # 使用一个线性层构建线性回归
-class LinearMINST(nn.Module):
+class LinearMNIST(nn.Module):
     def __init__(self):
         super().__init__()
-        self.linear = nn.Linear(784, 10)  # 对应MINST展平输入输出
+        self.linear = nn.Linear(784, 10)  # 对应MNIST展平输入输出
 
     def forward(self, x):
         return self.linear(x)  # 输出logits (batch_size, 10)
 
 
-model = LinearMINST()
+model = LinearMNIST()
 
 # 损失函数和优化器
 criterion = nn.CrossEntropyLoss()

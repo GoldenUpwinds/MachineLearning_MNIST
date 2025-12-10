@@ -26,7 +26,7 @@ test_loader = DataLoader(test_datset, batch_size=batch_size, shuffle=False)
 
 
 # 线性模型
-class LinearMINST(nn.Module):
+class LinearMNIST(nn.Module):
     def __init__(self):
         super().__init__()
         self.linear = nn.Linear(784, 10)
@@ -35,7 +35,7 @@ class LinearMINST(nn.Module):
         return self.linear(x)
 
 
-model = LinearMINST()
+model = LinearMNIST()
 
 # === MSE损失 ===
 criterion = nn.MSELoss()
